@@ -63,7 +63,7 @@ const EditBlog = () => {
 
   return (
     <div className='flex justify-center w-full flex-col'>
-      <div className='flex justify-end px-12 py-5'>
+      <div className='flex justify-between px-12 py-5'>
       <input type="text" className='border w-1/2 p-2'placeholder='enter your title here' value={title} required onChange={(e)=>setTitle(e.target.value)}/>
       <SubmitButton onClick={convertText}/>
       </div>

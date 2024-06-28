@@ -22,6 +22,7 @@ const Publish = () => {
 
     const convertText = () =>{
         let contentState = editorState.getCurrentContent()
+        console.log(convertedContent)
         console.log("Editors state",contentState)
         let convertedText = convertToRaw(contentState)
         console.log("After convertion",convertedText)

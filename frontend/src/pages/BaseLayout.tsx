@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react'
+import { ReactNode } from 'react'
 import Appbar from '../components/Appbar'
 
 const BaseLayout = ({children}:{children:ReactNode}) => {

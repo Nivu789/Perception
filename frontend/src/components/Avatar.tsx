@@ -1,6 +1,6 @@
-import { useState } from "react"
 
-export const Avatar=({name="Anonymous",size=6,appbar}:{name?:string,size?:number,appbar?:Boolean})=>{
+
+export const Avatar=({name="Anonymous"}:{name?:string,size?:number,appbar?:Boolean})=>{
   
   
   

@@ -1,6 +1,4 @@
-import React from 'react'
-import { Outlet, useNavigate } from 'react-router-dom'
-import { useEffect } from 'react'
+import { Outlet} from 'react-router-dom'
 import BaseLayout from '../pages/BaseLayout'
 import { useRecoilValue } from 'recoil'
 import { authState } from '../atoms/authAtom'

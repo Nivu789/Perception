@@ -1,5 +1,4 @@
-import React, { useState } from 'react'
-import { Avatar } from './Avatar'
+import { useState } from 'react'
 import { Link , useLocation, useNavigate } from 'react-router-dom'
 import { useSetRecoilState } from 'recoil';
 import { authState } from '../atoms/authAtom';

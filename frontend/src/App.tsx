@@ -5,7 +5,6 @@ import Signup from './pages/Signup'
 import Blog from './pages/Blog'
 import Blogs from './pages/Blogs'
 import Publish from './pages/Publish'
-import Appbar from './components/Appbar'
 import ProtectedRoute from './components/ProtectedRoute'
 import EditBlog from './pages/EditBlog'
 

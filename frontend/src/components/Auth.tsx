@@ -1,10 +1,10 @@
-import React, { ChangeEvent, ChangeEventHandler, useState } from 'react'
-import { Link, Navigate } from 'react-router-dom'
+import  { ChangeEvent,useState } from 'react'
+import { Link} from 'react-router-dom'
 import {SignupType} from '@nived789/common'
 import axios from 'axios'
 import {BASE_URL} from '../config/config'
 import { useNavigate } from 'react-router-dom'
-import { useRecoilState, useSetRecoilState } from 'recoil'
+import { useSetRecoilState } from 'recoil'
 import { authState } from '../atoms/authAtom'
 
  

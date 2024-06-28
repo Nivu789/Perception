@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import { EditorState, convertFromRaw, convertToRaw} from 'draft-js';
 import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
 import { Editor } from 'react-draft-wysiwyg';
-import { convertToHTML } from 'draft-convert';
+
 import axios from 'axios';
 import { BASE_URL } from '../config/config';
 import SubmitButton from '../components/SubmitButton';

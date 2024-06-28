@@ -1,4 +1,4 @@
-import React, { EventHandler, MouseEventHandler } from 'react'
+import  {  MouseEventHandler } from 'react'
 
 const SubmitButton = ({onClick}:{onClick:MouseEventHandler<HTMLButtonElement>}) => {
   return (

@@ -1,8 +1,8 @@
-import React, { useEffect } from 'react'
+import { useEffect } from 'react'
 import Auth from '../components/Auth'
 import { Quote } from '../components/Quote'
-import { Navigate, useNavigate } from 'react-router-dom'
-import { useRecoilValue , useSetRecoilState } from 'recoil'
+import {  useNavigate } from 'react-router-dom'
+import {  useSetRecoilState } from 'recoil'
 import { authState  } from '../atoms/authAtom'
 
 

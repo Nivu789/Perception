@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from 'react'
-import Appbar from './Appbar'
+import { useEffect, useState } from 'react'
 import { Avatar } from './Avatar'
 import { Blog } from '../hooks/useGetBlog'
 import DOMPurify from 'dompurify';

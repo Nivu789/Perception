@@ -1,8 +1,6 @@
-import React from 'react'
 import { useGetBlog } from '../hooks/useGetBlog'
 import { useParams } from 'react-router-dom'
 import FullBlog from '../components/FullBlog';
-import BlogsLoading from '../components/BlogsLoading';
 import BlogLoading from '../components/BlogLoading';
 
 

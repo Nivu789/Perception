@@ -1,0 +1,16 @@
+.wrapper-class {
+    padding: 1rem;
+    border: 1px solid #ccc;
+    min-height: 100vh;
+    max-height: fit-content;
+  }
+  .editor-class {
+    padding: 1rem;
+    border: 1px solid #ccc;
+    background-color: rgb(252, 252, 238);
+    min-height: 100vh;
+    max-height: fit-content;
+  }
+  .toolbar-class {
+    border: 1px solid #ccc;
+  }

@@ -1,8 +1,7 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { EditorState, convertFromRaw, convertToRaw} from 'draft-js';
 import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
 import { Editor } from 'react-draft-wysiwyg';
-
 import axios from 'axios';
 import { BASE_URL } from '../config/config';
 import SubmitButton from '../components/SubmitButton';
@@ -14,12 +13,13 @@ const EditBlog = () => {
     const params = useParams()
     const id = params?.id || "";
 
-    const {loading,blog} = useEditBlog({id})
+    const {loading,blog,dbTitle} = useEditBlog({id})
 
     const [editorState, setEditorState] = React.useState(
         () => EditorState.createEmpty(),
       );
       const navigate = useNavigate()
+      const [title,setTitle] = useState("")
 
       const convertText = () =>{
         let contentState = editorState.getCurrentContent()
@@ -27,7 +27,7 @@ const EditBlog = () => {
         let convertedText = convertToRaw(contentState)
         console.log("After convertion",convertedText)
         const dataToSend = {
-            title:"Test",
+            title:title,
             content:convertedText,
             blogId:id
         }
@@ -37,7 +37,7 @@ const EditBlog = () => {
             }
         })
         .then((response)=>{
-            if(response.statusText == "OK"){
+            if(response.status == 200){
                 console.log(response)
               navigate(`/blog/${id}`)
             }else{
@@ -46,12 +46,14 @@ const EditBlog = () => {
         })
     }
 
+
       useEffect(()=>{
         if(blog){
             const convertedText = convertFromRaw(blog)
             console.log(convertedText)
             const content = EditorState.createWithContent(convertedText)
             setEditorState(content)
+            setTitle(dbTitle)
         }
       },[blog])
 
@@ -62,6 +64,7 @@ const EditBlog = () => {
   return (
     <div className='flex justify-center w-full flex-col'>
       <div className='flex justify-end px-12 py-5'>
+      <input type="text" className='border w-1/2 p-2'placeholder='enter your title here' value={title} required onChange={(e)=>setTitle(e.target.value)}/>
       <SubmitButton onClick={convertText}/>
       </div>
       <div>
